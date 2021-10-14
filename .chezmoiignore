@@ -1,4 +1,12 @@
-.github/
-install.sh
+# Dotfiles
 LICENSE
 README.md
+install.sh
+
+{{ if (ne .chezmoi.os "darwin") }}{{/* Don't install MacOS files */}}
+# no darwin files
+{{ end }}
+
+{{ if (ne .chezmoi.os "linux" ) }}{{/* Don't install Linux files */}}
+# no linux files
+{{ end }}
